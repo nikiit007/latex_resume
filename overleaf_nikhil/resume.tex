@@ -1,0 +1,96 @@
+%-------------------------
+% Resume in Latex
+% Author : Audric Serador
+% Inspired by: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{fontawesome5}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{colortbl} % for \rowcolor
+
+\usepackage{tikz} %for dashed line
+\usepackage{xcolor}
+\usepackage{booktabs}
+
+%\usepackage{hhline} % for more flexible border options
+
+\definecolor{lightgray}{RGB}{220,220,220}
+
+
+% Custom font
+%\usepackage[default]{ebgaramond}
+
+%set highlight color
+%\usepackage{colortbl} % Load the colortbl package for coloring tables
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------%
+% Custom commands
+\begin{document}
+\include{custom-commands}
+
+%-------------------------------------------%
+%%%%%%  RESUME STARTS HERE  %%%%%
+
+%----------HEADING----------%
+\input{src/heading}
+\vspace{-18pt}
+
+
+%-----------EXPERIENCE-----------%
+\input{src/experience}
+
+\vspace{-12pt}
+%-----------EDUCATION-----------%
+\input{src/education.tex}
+
+
+\vspace{-8pt}
+%-----------SKILLS-----------%
+\input{src/skills.tex}
+
+%-------------------------------------------%
+\end{document}
