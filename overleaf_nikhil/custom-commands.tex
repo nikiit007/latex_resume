@@ -1,0 +1,102 @@
+%-------------------------%
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[1]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\small#1}  \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+
+
+\definecolor{Black}{RGB}{0, 0, 0}
+\newcommand{\seticon}[1]{\textcolor{Black}{\csname #1\endcsname}}
+
+% Custom commands for resume
+
+
+\newcommand{\expSubheading}[4]{
+  \vspace{-5pt}\item
+  \renewcommand{\arraystretch}{1}
+\begin{tabular*}{0.97\textwidth}[t]{@{}p{0.2\textwidth}p{0.33\textwidth}p{0.2\textwidth}p{0.24\textwidth}@{}}
+    \rowcolor[gray]{0.8} 
+  \textbf{#1} & \textit{\small#3} &\textit{\small #4} & \raggedleft\small #2 \
+\end{tabular*}\vspace{-17pt}
+}
+
+% Custom command for experience entry
+\newcommand{\experienceEntry}[4]{ % Arguments: Company, Dates, Title, Location
+    \expSubheading
+    {#1}{#2}
+    {#3}{#4} 
+    \vspace{2pt}
+}
+
+% Custom command for highlights
+\newcommand{\highlightsThreeArgs}[3]
+{
+\renewcommand{\arraystretch}{0.8}
+\begin{tabular*}{0.97\textwidth}[t]{@{}p{0.29\textwidth}p{0.18\textwidth}p{0.50\textwidth}@{}}
+    \rowcolor[gray]{0.9} 
+    \textit{\small #1} &
+    \textit{\small #2} &
+    \raggedleft \textit{\small #3} \
+    \end{tabular*}
+    \vspace{-9.5pt}
+}
+
+\newcommand{\highlightsTwoArgs}[2]
+{
+\begin{tabular*}{0.97\textwidth}[t]{@{}p{0.47\textwidth}p{0.5\textwidth}@{}}
+    \rowcolor[gray]{0.9} 
+    \textit{\small #1} &
+    \raggedleft \textit{ \small #2} 
+    \end{tabular*}
+    \vspace{-9.5pt}
+}
+% Custom command for experience details
+\newcommand{\experienceDetails}[2]{
+    \begin{tabular}{@{}m{0.17\textwidth}m{0.8\textwidth}@{}}
+    \raggedright \textit{\small #1} &
+    \begin{itemize}[leftmargin=*] 
+    \setlength{\itemsep}{-2pt} % Set the item separation
+    #2
+    \end{itemize}
+    \vspace{-5pt}
+    {\color{lightgray} \hrule}
+    \end{tabular}
+    
+    \vspace{-11pt}
+
+}
