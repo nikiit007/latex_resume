@@ -38,8 +38,6 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 
-
-
 \definecolor{Black}{RGB}{0, 0, 0}
 \newcommand{\seticon}[1]{\textcolor{Black}{\csname #1\endcsname}}
 
@@ -60,13 +58,13 @@
     \expSubheading
     {#1}{#2}
     {#3}{#4} 
-    \vspace{2pt}
+    \vspace{1pt}
 }
 
 % Custom command for highlights
 \newcommand{\highlightsThreeArgs}[3]
 {
-\renewcommand{\arraystretch}{0.8}
+%\renewcommand{\arraystretch}{0.8}
 \begin{tabular*}{0.97\textwidth}[t]{@{}p{0.29\textwidth}p{0.18\textwidth}p{0.50\textwidth}@{}}
     \rowcolor[gray]{0.9} 
     \textit{\small #1} &
@@ -99,4 +97,18 @@
     
     \vspace{-11pt}
 
+}
+
+\newcommand{\skillDetails}[2]{
+    \begin{tabular}{@{}m{0.16\textwidth}m{0.81\textwidth}@{}}
+    \raggedright \textit{\small #1} &
+    \begin{itemize}[leftmargin=*, label={}]
+    \setlength{\itemsep}{-2pt} % Set the item separation
+    #2
+    \end{itemize}
+    \vspace{-7pt}
+    {\color{lightgray} \hrule}
+    \end{tabular}
+    
+    \vspace{-11pt}
 }
