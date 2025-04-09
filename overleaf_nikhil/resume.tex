@@ -35,7 +35,8 @@
 
 
 % Custom font
-%\usepackage[default]{ebgaramond}
+\usepackage{lmodern} % Load Latin Modern font to avoid font substitution issues
+\usepackage[T1]{fontenc} % Ensure proper font encoding
 
 %set highlight color
 %\usepackage{colortbl} % Load the colortbl package for coloring tables
@@ -43,6 +44,7 @@
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
+\setlength{\footskip}{3.60004pt} % Set the footskip to avoid the fancyhdr error
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
